@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WebService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Banco" targetNamespace="http://WebService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WebServiceBanco/Banco?xsd=1" namespace="http://WebService/" />
+    </xsd:schema>
+  </types>
+  <message name="CambiarCheque">
+    <part name="parameters" element="tns:CambiarCheque" />
+  </message>
+  <message name="CambiarChequeResponse">
+    <part name="parameters" element="tns:CambiarChequeResponse" />
+  </message>
+  <message name="Transferencias">
+    <part name="parameters" element="tns:Transferencias" />
+  </message>
+  <message name="TransferenciasResponse">
+    <part name="parameters" element="tns:TransferenciasResponse" />
+  </message>
+  <message name="BuscarNomina">
+    <part name="parameters" element="tns:BuscarNomina" />
+  </message>
+  <message name="BuscarNominaResponse">
+    <part name="parameters" element="tns:BuscarNominaResponse" />
+  </message>
+  <message name="AgregarEmpleado">
+    <part name="parameters" element="tns:AgregarEmpleado" />
+  </message>
+  <message name="AgregarEmpleadoResponse">
+    <part name="parameters" element="tns:AgregarEmpleadoResponse" />
+  </message>
+  <message name="EliminarEmpleado">
+    <part name="parameters" element="tns:EliminarEmpleado" />
+  </message>
+  <message name="EliminarEmpleadoResponse">
+    <part name="parameters" element="tns:EliminarEmpleadoResponse" />
+  </message>
+  <message name="BuscarEmpleado">
+    <part name="parameters" element="tns:BuscarEmpleado" />
+  </message>
+  <message name="BuscarEmpleadoResponse">
+    <part name="parameters" element="tns:BuscarEmpleadoResponse" />
+  </message>
+  <message name="ModificarSueldo">
+    <part name="parameters" element="tns:ModificarSueldo" />
+  </message>
+  <message name="ModificarSueldoResponse">
+    <part name="parameters" element="tns:ModificarSueldoResponse" />
+  </message>
+  <message name="CambiarEstado">
+    <part name="parameters" element="tns:CambiarEstado" />
+  </message>
+  <message name="CambiarEstadoResponse">
+    <part name="parameters" element="tns:CambiarEstadoResponse" />
+  </message>
+  <message name="BuscarCliente">
+    <part name="parameters" element="tns:BuscarCliente" />
+  </message>
+  <message name="BuscarClienteResponse">
+    <part name="parameters" element="tns:BuscarClienteResponse" />
+  </message>
+  <message name="CuentaNomina">
+    <part name="parameters" element="tns:CuentaNomina" />
+  </message>
+  <message name="CuentaNominaResponse">
+    <part name="parameters" element="tns:CuentaNominaResponse" />
+  </message>
+  <message name="BuscarCuenta">
+    <part name="parameters" element="tns:BuscarCuenta" />
+  </message>
+  <message name="BuscarCuentaResponse">
+    <part name="parameters" element="tns:BuscarCuentaResponse" />
+  </message>
+  <message name="CrearNomina">
+    <part name="parameters" element="tns:CrearNomina" />
+  </message>
+  <message name="CrearNominaResponse">
+    <part name="parameters" element="tns:CrearNominaResponse" />
+  </message>
+  <message name="Retiro">
+    <part name="parameters" element="tns:Retiro" />
+  </message>
+  <message name="RetiroResponse">
+    <part name="parameters" element="tns:RetiroResponse" />
+  </message>
+  <message name="BuscarCuentaNomina">
+    <part name="parameters" element="tns:BuscarCuentaNomina" />
+  </message>
+  <message name="BuscarCuentaNominaResponse">
+    <part name="parameters" element="tns:BuscarCuentaNominaResponse" />
+  </message>
+  <message name="CrearCuenta">
+    <part name="parameters" element="tns:CrearCuenta" />
+  </message>
+  <message name="CrearCuentaResponse">
+    <part name="parameters" element="tns:CrearCuentaResponse" />
+  </message>
+  <message name="Prestamos">
+    <part name="parameters" element="tns:Prestamos" />
+  </message>
+  <message name="PrestamosResponse">
+    <part name="parameters" element="tns:PrestamosResponse" />
+  </message>
+  <message name="CrearCliente">
+    <part name="parameters" element="tns:CrearCliente" />
+  </message>
+  <message name="CrearClienteResponse">
+    <part name="parameters" element="tns:CrearClienteResponse" />
+  </message>
+  <message name="Deposito">
+    <part name="parameters" element="tns:Deposito" />
+  </message>
+  <message name="DepositoResponse">
+    <part name="parameters" element="tns:DepositoResponse" />
+  </message>
+  <portType name="Banco">
+    <operation name="CambiarCheque">
+      <input wsam:Action="http://WebService/Banco/CambiarChequeRequest" message="tns:CambiarCheque" />
+      <output wsam:Action="http://WebService/Banco/CambiarChequeResponse" message="tns:CambiarChequeResponse" />
+    </operation>
+    <operation name="Transferencias">
+      <input wsam:Action="http://WebService/Banco/TransferenciasRequest" message="tns:Transferencias" />
+      <output wsam:Action="http://WebService/Banco/TransferenciasResponse" message="tns:TransferenciasResponse" />
+    </operation>
+    <operation name="BuscarNomina">
+      <input wsam:Action="http://WebService/Banco/BuscarNominaRequest" message="tns:BuscarNomina" />
+      <output wsam:Action="http://WebService/Banco/BuscarNominaResponse" message="tns:BuscarNominaResponse" />
+    </operation>
+    <operation name="AgregarEmpleado">
+      <input wsam:Action="http://WebService/Banco/AgregarEmpleadoRequest" message="tns:AgregarEmpleado" />
+      <output wsam:Action="http://WebService/Banco/AgregarEmpleadoResponse" message="tns:AgregarEmpleadoResponse" />
+    </operation>
+    <operation name="EliminarEmpleado">
+      <input wsam:Action="http://WebService/Banco/EliminarEmpleadoRequest" message="tns:EliminarEmpleado" />
+      <output wsam:Action="http://WebService/Banco/EliminarEmpleadoResponse" message="tns:EliminarEmpleadoResponse" />
+    </operation>
+    <operation name="BuscarEmpleado">
+      <input wsam:Action="http://WebService/Banco/BuscarEmpleadoRequest" message="tns:BuscarEmpleado" />
+      <output wsam:Action="http://WebService/Banco/BuscarEmpleadoResponse" message="tns:BuscarEmpleadoResponse" />
+    </operation>
+    <operation name="ModificarSueldo">
+      <input wsam:Action="http://WebService/Banco/ModificarSueldoRequest" message="tns:ModificarSueldo" />
+      <output wsam:Action="http://WebService/Banco/ModificarSueldoResponse" message="tns:ModificarSueldoResponse" />
+    </operation>
+    <operation name="CambiarEstado">
+      <input wsam:Action="http://WebService/Banco/CambiarEstadoRequest" message="tns:CambiarEstado" />
+      <output wsam:Action="http://WebService/Banco/CambiarEstadoResponse" message="tns:CambiarEstadoResponse" />
+    </operation>
+    <operation name="BuscarCliente">
+      <input wsam:Action="http://WebService/Banco/BuscarClienteRequest" message="tns:BuscarCliente" />
+      <output wsam:Action="http://WebService/Banco/BuscarClienteResponse" message="tns:BuscarClienteResponse" />
+    </operation>
+    <operation name="CuentaNomina">
+      <input wsam:Action="http://WebService/Banco/CuentaNominaRequest" message="tns:CuentaNomina" />
+      <output wsam:Action="http://WebService/Banco/CuentaNominaResponse" message="tns:CuentaNominaResponse" />
+    </operation>
+    <operation name="BuscarCuenta">
+      <input wsam:Action="http://WebService/Banco/BuscarCuentaRequest" message="tns:BuscarCuenta" />
+      <output wsam:Action="http://WebService/Banco/BuscarCuentaResponse" message="tns:BuscarCuentaResponse" />
+    </operation>
+    <operation name="CrearNomina">
+      <input wsam:Action="http://WebService/Banco/CrearNominaRequest" message="tns:CrearNomina" />
+      <output wsam:Action="http://WebService/Banco/CrearNominaResponse" message="tns:CrearNominaResponse" />
+    </operation>
+    <operation name="Retiro">
+      <input wsam:Action="http://WebService/Banco/RetiroRequest" message="tns:Retiro" />
+      <output wsam:Action="http://WebService/Banco/RetiroResponse" message="tns:RetiroResponse" />
+    </operation>
+    <operation name="BuscarCuentaNomina">
+      <input wsam:Action="http://WebService/Banco/BuscarCuentaNominaRequest" message="tns:BuscarCuentaNomina" />
+      <output wsam:Action="http://WebService/Banco/BuscarCuentaNominaResponse" message="tns:BuscarCuentaNominaResponse" />
+    </operation>
+    <operation name="CrearCuenta">
+      <input wsam:Action="http://WebService/Banco/CrearCuentaRequest" message="tns:CrearCuenta" />
+      <output wsam:Action="http://WebService/Banco/CrearCuentaResponse" message="tns:CrearCuentaResponse" />
+    </operation>
+    <operation name="Prestamos">
+      <input wsam:Action="http://WebService/Banco/PrestamosRequest" message="tns:Prestamos" />
+      <output wsam:Action="http://WebService/Banco/PrestamosResponse" message="tns:PrestamosResponse" />
+    </operation>
+    <operation name="CrearCliente">
+      <input wsam:Action="http://WebService/Banco/CrearClienteRequest" message="tns:CrearCliente" />
+      <output wsam:Action="http://WebService/Banco/CrearClienteResponse" message="tns:CrearClienteResponse" />
+    </operation>
+    <operation name="Deposito">
+      <input wsam:Action="http://WebService/Banco/DepositoRequest" message="tns:Deposito" />
+      <output wsam:Action="http://WebService/Banco/DepositoResponse" message="tns:DepositoResponse" />
+    </operation>
+  </portType>
+  <binding name="BancoPortBinding" type="tns:Banco">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CambiarCheque">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Transferencias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarNomina">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AgregarEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarEmpleado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModificarSueldo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CambiarEstado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CuentaNomina">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearNomina">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Retiro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="BuscarCuentaNomina">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Prestamos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Deposito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Banco">
+    <port name="BancoPort" binding="tns:BancoPortBinding">
+      <soap:address location="http://localhost:8080/WebServiceBanco/Banco" />
+    </port>
+  </service>
+</definitions>

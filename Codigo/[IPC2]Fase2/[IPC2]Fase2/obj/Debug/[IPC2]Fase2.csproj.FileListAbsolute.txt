@@ -1,0 +1,5 @@
+C:\Users\walteregv95\Documents\Wall-e\U\Vacasiones1s2017\IPC2\[IPC2]Fase2\[IPC2]Fase2\bin\[IPC2]Fase2.dll
+C:\Users\walteregv95\Documents\Wall-e\U\Vacasiones1s2017\IPC2\[IPC2]Fase2\[IPC2]Fase2\bin\[IPC2]Fase2.pdb
+C:\Users\walteregv95\Documents\Wall-e\U\Vacasiones1s2017\IPC2\[IPC2]Fase2\[IPC2]Fase2\obj\Debug\[IPC2]Fase2.dll
+C:\Users\walteregv95\Documents\Wall-e\U\Vacasiones1s2017\IPC2\[IPC2]Fase2\[IPC2]Fase2\obj\Debug\[IPC2]Fase2.pdb
+C:\Users\walteregv95\Documents\Wall-e\U\Vacasiones1s2017\IPC2\[IPC2]Fase2\[IPC2]Fase2\obj\Debug\[IPC2]Fase2.csprojResolveAssemblyReference.cache

@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAD8AB31-6FE3-4C18-A2D6-DCA12A7A470A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_IPC2_Fase2</RootNamespace>
+    <AssemblyName>[IPC2]Fase2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdministrarChequera.aspx" />
+    <Content Include="AdministrarCuenta.aspx" />
+    <Content Include="AgregarEmpleado.aspx" />
+    <Content Include="CambiarCheque.aspx" />
+    <Content Include="CrearNomina.aspx" />
+    <Content Include="CuentaNomina.aspx" />
+    <Content Include="EliminarEmpleado.aspx" />
+    <Content Include="Inicio_Cajero.aspx" />
+    <Content Include="Inicio_Nomina.aspx" />
+    <Content Include="Inicio_ServioAlCliente.aspx" />
+    <Content Include="ModificarSueldo.aspx" />
+    <Content Include="NuevaChequera.aspx" />
+    <Content Include="NuevaCuenta.aspx" />
+    <Content Include="NuevoCliente.aspx" />
+    <Content Include="Prestamos.aspx" />
+    <Content Include="Service References\ServiceReference1\configuration91.svcinfo" />
+    <Content Include="Service References\ServiceReference1\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Tranferencias.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministrarChequera.aspx.cs">
+      <DependentUpon>AdministrarChequera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarChequera.aspx.designer.cs">
+      <DependentUpon>AdministrarChequera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdministrarCuenta.aspx.cs">
+      <DependentUpon>AdministrarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdministrarCuenta.aspx.designer.cs">
+      <DependentUpon>AdministrarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEmpleado.aspx.cs">
+      <DependentUpon>AgregarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarEmpleado.aspx.designer.cs">
+      <DependentUpon>AgregarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionAlCliente.Master.cs">
+      <DependentUpon>AtencionAlCliente.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AtencionAlCliente.Master.designer.cs">
+      <DependentUpon>AtencionAlCliente.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Cajero.Master.cs">
+      <DependentUpon>Cajero.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cajero.Master.designer.cs">
+      <DependentUpon>Cajero.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CambiarCheque.aspx.cs">
+      <DependentUpon>CambiarCheque.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarCheque.aspx.designer.cs">
+      <DependentUpon>CambiarCheque.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrearNomina.aspx.cs">
+      <DependentUpon>CrearNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearNomina.aspx.designer.cs">
+      <DependentUpon>CrearNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentaNomina.aspx.cs">
+      <DependentUpon>CuentaNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CuentaNomina.aspx.designer.cs">
+      <DependentUpon>CuentaNomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarEmpleado.aspx.cs">
+      <DependentUpon>EliminarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarEmpleado.aspx.designer.cs">
+      <DependentUpon>EliminarEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio_Cajero.aspx.cs">
+      <DependentUpon>Inicio_Cajero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio_Cajero.aspx.designer.cs">
+      <DependentUpon>Inicio_Cajero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio_Nomina.aspx.cs">
+      <DependentUpon>Inicio_Nomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio_Nomina.aspx.designer.cs">
+      <DependentUpon>Inicio_Nomina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio_ServioAlCliente.aspx.cs">
+      <DependentUpon>Inicio_ServioAlCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio_ServioAlCliente.aspx.designer.cs">
+      <DependentUpon>Inicio_ServioAlCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarSueldo.aspx.cs">
+      <DependentUpon>ModificarSueldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarSueldo.aspx.designer.cs">
+      <DependentUpon>ModificarSueldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nominas.Master.cs">
+      <DependentUpon>Nominas.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nominas.Master.designer.cs">
+      <DependentUpon>Nominas.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaChequera.aspx.cs">
+      <DependentUpon>NuevaChequera.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaChequera.aspx.designer.cs">
+      <DependentUpon>NuevaChequera.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaCuenta.aspx.cs">
+      <DependentUpon>NuevaCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaCuenta.aspx.designer.cs">
+      <DependentUpon>NuevaCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoCliente.aspx.cs">
+      <DependentUpon>NuevoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoCliente.aspx.designer.cs">
+      <DependentUpon>NuevoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos.aspx.cs">
+      <DependentUpon>Prestamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Prestamos.aspx.designer.cs">
+      <DependentUpon>Prestamos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Tranferencias.aspx.cs">
+      <DependentUpon>Tranferencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tranferencias.aspx.designer.cs">
+      <DependentUpon>Tranferencias.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cajero.Master" />
+    <Content Include="AtencionAlCliente.Master" />
+    <Content Include="Nominas.Master" />
+    <Content Include="Service References\ServiceReference1\Banco.wsdl" />
+    <None Include="Service References\ServiceReference1\Banco.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.AgregarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.BuscarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.BuscarCuentaNominaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.BuscarCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.BuscarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.BuscarNominaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CambiarChequeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CambiarEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CrearClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CrearCuentaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CrearNominaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.CuentaNominaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.DepositoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.EliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.ModificarSueldoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.PrestamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.RetiroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReference1\_IPC2_Fase2.ServiceReference1.TransferenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2913/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
